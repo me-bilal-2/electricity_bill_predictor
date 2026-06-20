@@ -24,50 +24,51 @@ st.set_page_config(
 st.markdown("""
     <style>
         :root {
-            --primary-color: #0b6efd;
-            --text-color: #0f1724;
-            --accent-blue: #0b6efd;
-            --accent-green: #2aa653;
-            --muted: #6b7280;
+            /* Streamlit theme variables (force light) */
+            --primaryColor: #0b6efd !important;
+            --backgroundColor: #ffffff !important;
+            --secondaryBackgroundColor: #f6f8fa !important;
+            --textColor: #0f1724 !important;
+            --font: "sans serif" !important;
         }
 
-        /* Page background and base text */
-        body, .stMainBlockContainer {
-            background-color: #ffffff;
-            color: var(--text-color);
+        /* Force page background and base text color (important to override other CSS) */
+        html, body, .stApp, .css-1d391kg, .main, .block-container, .stMainBlock {
+            background-color: #ffffff !important;
+            color: #0f1724 !important;
         }
 
         /* Header */
         [data-testid="stHeader"] {
-            background-color: transparent;
+            background-color: transparent !important;
         }
 
         /* Lightweight metric card with subtle shadow */
         .metric-card {
-            background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-            padding: 18px;
-            border-radius: 10px;
-            border-left: 4px solid var(--primary-color);
-            box-shadow: 0 6px 18px rgba(15, 23, 36, 0.04);
+            background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%) !important;
+            padding: 18px !important;
+            border-radius: 10px !important;
+            border-left: 4px solid #0b6efd !important;
+            box-shadow: 0 6px 18px rgba(15, 23, 36, 0.04) !important;
         }
 
         /* Headings use the primary accent for clarity */
         h1, h2, h3 {
-            color: var(--primary-color);
+            color: #0b6efd !important;
         }
 
         /* Tabs and controls */
         .stTabs [data-baseweb="tab-list"] button {
-            color: var(--muted);
+            color: #6b7280 !important;
         }
 
-        /* Make sliders and primary controls use accent color */
-        .stSlider .stMarkdown, .stFileUploader, .stButton > button {
-            accent-color: var(--primary-color);
+        /* Buttons, sliders, inputs */
+        .stButton>button, input, textarea, .stSlider>div {
+            color: #0f1724 !important;
         }
 
-        /* Small improvements for readability */
-        .stApp, .css-1d391kg { background-color: transparent; }
+        /* Ensure foreground elements contrast */
+        .stMetricValue, .stMetricLabel, .css-2trqyj { color: #0f1724 !important; }
     </style>
 """, unsafe_allow_html=True)
 
