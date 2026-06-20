@@ -1,19 +1,11 @@
 # Streamlit theme config — light, modern, high-contrast text
 [theme]
 base = "light"
-primaryColor = "#0066FF"
-backgroundColor = "#F7FBFF"
-secondaryBackgroundColor = "#FFFFFF"
-textColor = "#0F172A"
-font = "sans serif"
-[theme]
-base = "light"
 primaryColor = "#0b6efd"
 backgroundColor = "#ffffff"
 secondaryBackgroundColor = "#f6f8fa"
 textColor = "#0f1724"
-font = "Sans serif"
-# Note: Streamlit doesn't support fontSize/borderRadius in config
+font = "sans serif"
 
 [server]
 # recommended for local development
