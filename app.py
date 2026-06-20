@@ -24,35 +24,50 @@ st.set_page_config(
 st.markdown("""
     <style>
         :root {
-            --primary-color: #0e1117;
-            --text-color: #e0e0e0;
-            --accent-blue: #00D9FF;
-            --accent-green: #39FF14;
+            --primary-color: #0b6efd;
+            --text-color: #0f1724;
+            --accent-blue: #0b6efd;
+            --accent-green: #2aa653;
+            --muted: #6b7280;
         }
-        
+
+        /* Page background and base text */
         body, .stMainBlockContainer {
-            background-color: #0e1117;
-            color: #e0e0e0;
+            background-color: #ffffff;
+            color: var(--text-color);
         }
-        
+
+        /* Header */
         [data-testid="stHeader"] {
-            background-color: #0e1117;
+            background-color: transparent;
         }
-        
+
+        /* Lightweight metric card with subtle shadow */
         .metric-card {
-            background: linear-gradient(135deg, #1a1f2e 0%, #16213e 100%);
-            padding: 20px;
+            background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+            padding: 18px;
             border-radius: 10px;
-            border-left: 4px solid #00D9FF;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 6px 18px rgba(15, 23, 36, 0.04);
         }
-        
+
+        /* Headings use the primary accent for clarity */
         h1, h2, h3 {
-            color: #00D9FF;
+            color: var(--primary-color);
         }
-        
+
+        /* Tabs and controls */
         .stTabs [data-baseweb="tab-list"] button {
-            color: #e0e0e0;
+            color: var(--muted);
         }
+
+        /* Make sliders and primary controls use accent color */
+        .stSlider .stMarkdown, .stFileUploader, .stButton > button {
+            accent-color: var(--primary-color);
+        }
+
+        /* Small improvements for readability */
+        .stApp, .css-1d391kg { background-color: transparent; }
     </style>
 """, unsafe_allow_html=True)
 
